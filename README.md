@@ -86,5 +86,29 @@ spec:
           periodSeconds: 10
 ```
 
+## k8s/service.yaml
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: lead-scoring-service
+spec:
+  type: LoadBalancer   # works locally via port-forward in kind
+  selector:
+    app: lead-scoring
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9696
+```
+
+## Results (Screenshots)
+Pods Running
+Services
+Prediction Output
+Prediction result: {'lead_score': ~0.50} (matches local Docker execution)
+
+
 
 
