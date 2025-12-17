@@ -109,10 +109,11 @@ Services
 Prediction Output
 Prediction result: {'lead_score': ~0.50} (matches local Docker execution)
 
-<img width="894" height="485" alt="Снимок экрана 2025-12-16 в 20 03 16" src="https://github.com/user-attachments/assets/1132ad50-9bee-4f95-95c8-7311a6c56a2a" />
-<img width="684" height="102" alt="Снимок экрана 2025-12-17 в 00 01 25" src="https://github.com/user-attachments/assets/4476e8e2-7239-44f7-bd90-449eab2a8e3a" />
-<img width="906" height="346" alt="Снимок экрана 2025-12-16 в 17 37 58" src="https://github.com/user-attachments/assets/a4c8aa84-7e49-4992-ab0f-69569680ede1" />
-<img width="1035" height="812" alt="Снимок экрана 2025-12-16 в 17 38 15" src="https://github.com/user-attachments/assets/0bd5e499-041b-437e-bca7-e547b524f5cb" />
+<img width="532" height="55" alt="proofs" src="https://github.com/user-attachments/assets/d334d371-22ef-42c5-985d-de230ce20474" />
+<img width="684" height="102" alt="pods" src="https://github.com/user-attachments/assets/959b7e26-ef35-4cea-a74c-4d53e53d55e7" />
+<img width="489" height="619" alt="servis" src="https://github.com/user-attachments/assets/8418a9d3-dec4-4bdb-86bc-3e366807a2b6" />
+<img width="928" height="114" alt="running" src="https://github.com/user-attachments/assets/98746a87-d634-4792-8800-77e0a95c86cb" />
+<img width="1035" height="812" alt="Снимок экрана 2025-12-16 в 17 38 15" src="https://github.com/user-attachments/assets/0a0768ef-d9b2-44a8-9582-b987718532a7" />
 
 
 ## Cleanup
@@ -125,6 +126,9 @@ kind delete cluster
 ## License
 
 MIT License — feel free to fork and extend.
+
+
+Built as part of Machine Learning Zoomcamp 2025 by Guldanika Osmonova.
 
 
 
