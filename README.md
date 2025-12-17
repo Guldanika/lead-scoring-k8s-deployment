@@ -43,3 +43,48 @@ kubectl get services  # note the service port mapping
 kubectl port-forward service/lead-scoring-service 9696:80
 # In another terminal
 python test_request.py   # or curl → expected prediction ~0.50
+
+```
+## Manifests
+
+k8s/deployment.yaml
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lead-scoring
+  labels:
+    app: lead-scoring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lead-scoring
+  template:
+    metadata:
+      labels:
+        app: lead-scoring
+    spec:
+      containers:
+      - name: model
+        image: <your-lead-scoring-image>:latest
+        ports:
+        - containerPort: 9696
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        readinessProbe:
+          httpGet:
+            path: /health   # if your app has health endpoint; optional
+            port: 9696
+          initialDelaySeconds: 10
+          periodSeconds: 10
+```
+
+
+
